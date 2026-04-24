@@ -3,11 +3,10 @@ pipeline {
 
     stages {
         stage('Clone') {
-            steps {
-                // Pulls the latest code from your repo
-                git 'https://github.com/DemonicBlack2005/CSEB5143-DevOps-Project.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/DemonicBlack2005/CSEB5143-DevOps-Project.git'
+    }
+}
 
         stage('Build') {
             steps {
